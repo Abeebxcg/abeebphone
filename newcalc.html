@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      form input {
+        border: 0;
+        outline: 0;
+        height: 40px;
+        width: 40px;
+        border-radius: 10px;
+        box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),
+          5px 5px 15px rgba(0, 0, 0, 0.2);
+        background-color: transparent;
+        font-size: 20px;
+        cursor: pointer;
+        padding: auto;
+        margin: 10px;
+        font-size: 20px;
+      }
+
+      .equal {
+        width: 145px;
+      }
+    </style>
+    <title>iPhone</title>
+  </head>
+  <body onload="getDate()">
+    <nav class="outer p-4 bg-light rounded">
+      <div class="phon border border-dark rounded-2">
+        <div
+          class="mx-auto bg-dark rounded-bottom"
+          style="width: 80px; height: 10px"
+        ></div>
+        <div class="phone d-flex flex-column justify-content-between px-3 py-1">
+          <div class="top mb-5 d-flex justify-content-between">
+            <div class="left d-flex">
+              
+              <div class="mx-2">
+                <div class="display" id="dis"><span><ion-icon name="alarm-outline"></ion-icon></span></div>
+              </div>
+            </div>
+            <div class="right d-flex ms-auto">
+              <div>
+                <ion-icon name="volume-medium"></ion-icon>
+                <ion-icon name="cellular-outline"></ion-icon>
+                <ion-icon name="battery-full-outline"></ion-icon>
+              </div>
+            </div>
+          </div>
+
+          <div class="widget py-2 px-2 border rounded-2 mb-3 border-dark">
+            <form>
+              <div>
+                <input
+                  type="text"
+                  class="form-control editInput"
+                  name="display"
+                />
+              </div>
+              <div>
+                <input onclick="display.value = ''" type="button" value="AC" />
+                <input
+                  type="button"
+                  value="DE"
+                  onclick="display.value = display.value.toString().slice(0,-1)"
+                />
+                <input onclick="display.value += '.'" type="button" value="." />
+                <input onclick="display.value += '/'" type="button" value="/" />
+              </div>
+              <div>
+                <input onclick="display.value += '7'" type="button" value="7" />
+                <input onclick="display.value += '8'" type="button" value="8" />
+                <input onclick="display.value += '9'" type="button" value="9" />
+                <input onclick="display.value += '*'" type="button" value="*" />
+              </div>
+              <div>
+                <input onclick="display.value += '4'" type="button" value="4" />
+                <input onclick="display.value += '5'" type="button" value="5" />
+                <input onclick="display.value += '6'" type="button" value="6" />
+                <input onclick="display.value += '-'" type="button" value="-" />
+              </div>
+              <div>
+                <input onclick="display.value += '3'" type="button" value="3" />
+                <input onclick="display.value += '2'" type="button" value="2" />
+                <input onclick="display.value += '1'" type="button" value="1" />
+                <input onclick="display.value += '+'" type="button" value="+" />
+              </div>
+              <div>
+                <input
+                  onclick="display.value += '00'"
+                  type="button"
+                  value="00"
+                />
+                <input onclick="display.value += '0'" type="button" value="0" />
+                <input
+                  onclick="display.value = eval(display.value)"
+                  type="button"
+                  value="="
+                  class="equal"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="mx-auto" style="width: 50px">
+            <ion-icon
+              name="chevron-forward-circle-outline"
+              size="large"
+              onclick="back()"
+            ></ion-icon>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="calcs.js"></script>
+  </body>
+</html>

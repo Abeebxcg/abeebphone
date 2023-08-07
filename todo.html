@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="stud.css" />
+    <title>iPhone</title>
+  </head>
+  <body>
+    <nav class="outer p-4 bg-light rounded">
+      <div class="phon border border-dark rounded-2">
+        <div
+          class="mx-auto bg-dark rounded-bottom"
+          style="width: 80px; height: 10px"
+        ></div>
+        <div class="phone d-flex flex-column justify-content-between px-3 py-1">
+          <div class="top d-flex justify-content-between">
+            <div class="left d-flex">
+              <div class="display"></div>
+              <div class="mx-2">
+                <ion-icon name="alarm-outline"></ion-icon>
+              </div>
+            </div>
+            <div class="right d-flex ms-auto">
+              <div>
+                <ion-icon name="volume-medium"></ion-icon>
+                <ion-icon name="cellular-outline"></ion-icon>
+                <ion-icon name="battery-full-outline"></ion-icon>
+              </div>
+            </div>
+          </div>
+          <nav class="p-4 rounded">
+            <div class="container">
+              <div class="bg-info shadow-lg text-center text-white px-3 mt-3">
+                <h5
+                  class="mt-1 mb-1 animate__animated p-2 animate__pulse animate__infinite animate__slower rounded text-white text-decoration-underline shadow-sm text-shadow-lg"
+                >
+                  AlBAYAANDRIVE-STUDENT PORTAL
+                </h5>
+                <form action="">
+                  <input
+                    type="text"
+                    id="studentName"
+                    class="form-control mb-3 bg-white outline-none"
+                    placeholder="Full name "
+                  />
+
+                  <input
+                    type="text"
+                    id="studentDept"
+                    class="form-control mb-3 bg-white outline-none"
+                    placeholder="Department "
+                  />
+
+                  <input
+                    type="number"
+                    id="GtudentMatric"
+                    class="form-control mb-3 bg-white outline-none"
+                    placeholder="Matric Number "
+                  />
+
+                  <input
+                    type="text"
+                    id="studentPass"
+                    class="form-control mb-5 bg-white outline-none"
+                    placeholder="Password"
+                  />
+
+                  <div
+                    class="btn btn-success mb-2 form-control"
+                    onclick="addDetails()"
+                  >
+                    Add Details
+                  </div>
+                </form>
+
+                <div
+                  id="error"
+                  style="display: none"
+                  class="bg-danger text-white mb-5 py-2 rounded mb-2"
+                >
+                  Please input all details
+                </div>
+
+                <div id="none" class="bg-warning py-2 h1 rounded mb-2">
+                  No student has registered
+                </div>
+
+                <table
+                  class="table table-striped text-white table-bordered table-striped-columns"
+                  style="max-width: 200px"
+                  id="table"
+                ></table>
+              </div>
+            </div>
+          </nav>
+
+          <!-- Button trigger modal -->
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Edit Student
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <input
+                    class="form-control mb-2"
+                    placeholder="input student full name"
+                    type="text"
+                    class="form-control"
+                    id="item1"
+                    id="item1"
+                  />
+
+                  <input
+                    class="form-control mb-2"
+                    placeholder="input student department"
+                    type="text"
+                    id="item2"
+                    id="item2"
+                  />
+
+                  <input
+                    class="form-control mb-2"
+                    placeholder="input student matric"
+                    type="text"
+                    id="item3"
+                    id="item3"
+                  />
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button
+                    type="button"
+                    data-bs-dismiss="modal"
+                    onclick="editDetails()"
+                    class="btn btn-primary"
+                  >
+                    Save changes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mx-auto" style="width: 50px">
+            <ion-icon
+              name="chevron-forward-circle-outline"
+              size="large"
+              onclick="back()"
+            ></ion-icon>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="std.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

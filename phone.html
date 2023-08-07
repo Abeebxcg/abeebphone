@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>iPhone</title>
+  </head>
+  <body onload="getDate()">
+    <nav class="outer p-4 bg-light rounded">
+      <div class="phon border border-dark rounded-2">
+        <div
+          class="mx-auto bg-dark rounded-bottom"
+          style="width: 80px; height: 10px"
+        ></div>
+        <div class="phone d-flex flex-column justify-content-between px-3 py-1">
+          <div class="top d-flex justify-content-between">
+            <div class="left d-flex">
+              <div class="display" id="dis"></div>
+              <div class="mx-2">
+                <ion-icon name="alarm-outline"></ion-icon>
+              </div>
+            </div>
+            <div class="right d-flex ms-auto">
+              <div>
+                <ion-icon name="volume-medium"></ion-icon>
+                <ion-icon name="cellular-outline"></ion-icon>
+                <ion-icon name="battery-full-outline"></ion-icon>
+              </div>
+            </div>
+          </div>
+
+          <div class="middle p-3 shadow-lg">
+            <div class="d-flex justify-content-between mb-5">
+              <a href="https://www.facebook.com">
+                <ion-icon name="logo-facebook" size="large"></ion-icon
+              ></a>
+              <!-- //<ion-icon name="logo-facebook"  size="large"></ion-icon> -->
+              <a href="https://www.instagram.com">
+                <ion-icon name="logo-instagram" size="large"></ion-icon
+              ></a>
+              <a href="https://www.linkedln.com">
+                <ion-icon name="logo-linkedin" size="large"></ion-icon
+              ></a>
+              <a href="https://www.google.com">
+                <ion-icon name="logo-google" size="large"></ion-icon
+              ></a>
+            </div>
+            <div class="d-flex justify-content-between">
+              <ion-icon name="logo-venmo" size="large"></ion-icon>
+              <ion-icon name="logo-youtube" size="large"></ion-icon>
+              <ion-icon
+                name="logo-medium"
+                onclick="todo()"
+                size="large"
+              ></ion-icon>
+              <a href="https://www.paypal.com">
+                <ion-icon name="logo-paypal" size="large"></ion-icon
+              ></a>
+            </div>
+          </div>
+
+          <div class="widget py-2 px-2 border rounded-2 border-dark">
+            <div class="d-flex justify-content-between last">
+              <ion-icon name="call" onclick="CALL()" size="large"></ion-icon>
+              <ion-icon name="caret-up-circle" size="large"></ion-icon>
+              <ion-icon name="chatbox" size="large"></ion-icon>
+              <ion-icon
+                name="calculator"
+                size="large"
+                onclick="calc()"
+              ></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

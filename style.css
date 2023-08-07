@@ -1,0 +1,41 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.phone {
+  min-width: 300px;
+  min-height: 500px;
+}
+
+.phon {
+  background-image: url(./images/iphone-x-office-background-1125-x-2436-kjko0r34ojm6f8gi.webp);
+  background-size: cover;
+}
+
+.middle ion-icon {
+  color: burlywood;
+  border: 2px solid rgb(241,241,241);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.last ion-icon {
+  color: #959396;
+  font-size: 20px;
+  font-weight: bold;
+  width: 40px;
+  height: 30px;
+  background-color: rgb(241,241,241);
+  border-radius: 30px;
+  padding: 5px;
+}
+
+.last ion-icon:hover{
+  transform: scale(0.9);
+}
+.middle ion-icon:hover{
+  transform: scale(1.5);
+}

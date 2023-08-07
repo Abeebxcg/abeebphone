@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      form input {
+        border: 0;
+        outline: 0;
+        height: 40px;
+        width: 40px;
+        border-radius: 10px;
+        box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),
+          5px 5px 15px rgba(0, 0, 0, 0.2);
+        background-color: transparent;
+        font-size: 20px;
+        cursor: pointer;
+        padding: auto;
+        margin: 10px;
+        font-size: 20px;
+      }
+
+      .equal {
+        width: 145px;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>iPhone</title>
+  </head>
+  <body>
+    <nav class="outer p-4 bg-light rounded">
+      <div class="phon border border-dark rounded-2">
+        <div
+          class="mx-auto bg-dark rounded-bottom"
+          style="width: 80px; height: 10px"
+        ></div>
+
+         <!-- main phone -->
+        <div class="phone d-flex flex-column justify-content-between px-3 py-1">
+
+          <!-- Top part of the phone -->
+          <div class="top d-flex justify-content-between">
+            <div class="left d-flex">
+              <!-- <div class="display"></div> -->
+              <div class="mx-2">
+                <ion-icon name="alarm-outline"></ion-icon>
+              </div>
+            </div>
+            <div class="right d-flex ms-auto">
+              <div>
+                <ion-icon name="volume-medium"></ion-icon>
+                <ion-icon name="cellular-outline"></ion-icon>
+                <ion-icon name="battery-full-outline"></ion-icon>
+              </div>
+            </div>
+          </div>
+            
+          <!-- middle part of the phone -->
+
+            <div class="bottom">
+              <form action="" >
+                <div class="d-flex flex-column">
+                  <input type="button" name="display" class="form-control py-4" />
+                  <div class="mx-auto">
+                    <input type="button" class="text-center" onclick="display.value += '1'" value="1" />
+                    <input type="button" class="text-center" onclick="display.value += '2'" value="2" />
+                    <input type="button" class="text-center" onclick="display.value += '3'" value="3" />
+                  </div>
+                  <div class="mx-auto">
+                    <input type="button" class="text-center" onclick="display.value += '4'" value="4" />
+                    <input type="button" class="text-center" onclick="display.value += '5'" value="5" />
+                    <input type="button" class="text-center" onclick="display.value += '6'" value="6" />
+                  </div>
+                  <div class="mx-auto">
+                    <input type="button" class="text-center" onclick="display.value += '7'" value="7" />
+                    <input type="button" class="text-center" onclick="display.value += '8'" value="8" />
+                    <input type="button" class="text-center" onclick="display.value += '9'" value="9" />
+                  </div>
+                  <div class="mx-auto">
+                    <input type="button" class="text-center" onclick="display.value += '*'" value="*" />
+                    <input type="button" class="text-center" onclick="display.value += '0'" value="0" />
+                    <input type="button" class="text-center" onclick="display.value += '#'" value="#" />
+                  </div>
+                  <div class="mx-auto">
+                    <input type="button" class="text-center "  value="Call" onclick="dial()" />
+                    <input type="button" class="text-center " value="+"  data-bs-toggle="modal" data-bs-target="#exampleModal"/>
+                    <input type="button" onclick="display.value = display.value.slice(0,-1)" value="x"/>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- closing tag -->
+            <div class="mx-auto" style="width: 50px">
+              <ion-icon
+                name="chevron-forward-circle-outline"
+                size="large"
+                onclick="back()"
+              ></ion-icon>
+            </div>
+          
+        </div>
+      </div>
+    </nav>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Save contact</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+  </body>
+</html>
